@@ -5,7 +5,7 @@ import GameWindow from './components/GameWindow.jsx';
 import SkillBar from './components/SkillBar.jsx';
 import PixelButton from './components/PixelButton.jsx';
 import mypicture from './images/brenapic.jpg';
-import { title } from 'framer-motion/client';
+import { image, title } from 'framer-motion/client';
 
 const ProjectCard = ({ title, description, image, tags, link }) => (
   <motion.div 
@@ -204,6 +204,7 @@ function MainPortfolio() {
     {
       title: "A Sprouts Journey",
       description: "A platformer",
+      image: mypicture,
       tags: ["Unity", "C#", "2D", "Pixel Art"],
       link: "https://aiyvan.itch.io/a-sprouts-journey"
     },
@@ -320,15 +321,18 @@ function MainPortfolio() {
               DEV CLASS: <span className="text-yellow-400">CREATOR</span>
             </h2>
             
+            <p className="text-xl text-gray-400">
+              Game Dev + Web Dev + QA Automation//
+            </p>
             <p className="text-xl text-gray-400 mb-8">
-              Game Dev + Web Dev // Crafting interactive experiences with React and Unity
+              Games. Websites. Automation. All crafted with care.
             </p>
             
             <div className="flex flex-wrap gap-4 justify-center md:justify-start">
               <PixelButton href="#projects">
                 VIEW PROJECTS
               </PixelButton>
-              <PixelButton href="#about"className="bg-gray-800 hover:bg-gray-700">
+              <PixelButton href="#contact"className="bg-gray-800 hover:bg-gray-700">
                 CONTACT ME
               </PixelButton>
             </div>
@@ -372,23 +376,21 @@ function MainPortfolio() {
                 <div className="prose prose-lg text-gray-300">
                   <p>
                     Hey there! I'm <span className="text-yellow-400 font-bold">Aiyvan</span>, a passionate 
-                    game and web developer with a love for creating interactive experiences.
+                    game, web developer and QA Automation
                   </p>
                   
                   <p className="mt-4">
-                    My journey in the digital realm began as a hobby, experimenting with simple games 
-                    and websites. Today, I've transformed that passion into a skillset that bridges 
-                    the gap between imagination and technology.
+                    My journey in the digital realm began as a hobby, experimenting with simple games and websites. 
+                    Today, I've transformed that passion into a skillset that brings ideas to life across code, creativity, and quality.
                   </p>
                   
                   <p className="mt-4">
-                    Whether I'm crafting a pixel-art platformer in Unity or designing a responsive web 
-                    application with React, I'm always pushing myself to create experiences that are 
-                    both visually stunning and functionally elegant.
+                    Whether I’m building pixel-art platformers in Unity, developing sleek and responsive websites, or automating tests with Karate Cucumber, 
+                    I’m always striving to create experiences that are both engaging and reliable.
                   </p>
                   
                   <div className="mt-8 p-4 bg-gray-900 border-l-4 border-yellow-400 italic">
-                    "Every dev starts as a noob — the key is to keep respawning."
+                    "Every dev starts as a noob, The key is to keep respawning."
                   </div>
                 </div>
               </div>
@@ -400,15 +402,15 @@ function MainPortfolio() {
                   <div className="grid grid-cols-2 gap-4 mb-6">
                     <div>
                       <div className="text-gray-400 text-sm">CLASS</div>
-                      <div className="font-bold">Game Developer</div>
+                      <div className="font-bold"> <span className='text-yellow-400'>Digital Craftsman</span></div>
                     </div>
                     <div>
                       <div className="text-gray-400 text-sm">SPECIALTY</div>
-                      <div className="font-bold">Frontend & UI</div>
+                      <div className="font-bold">Unity / Web Dev / Karate Automation</div>
                     </div>
                     <div>
-                      <div className="text-gray-400 text-sm">EXPERIENCE</div>
-                      <div className="font-bold">5+ Years</div>
+                      <div className="text-gray-400 text-sm">EDUCATION</div>
+                      <div className="font-bold">Bachelor's in Information Technology - <span className='text-yellow-400'>National University Laguna</span></div>
                     </div>
                     <div>
                       <div className="text-gray-400 text-sm">LOCATION</div>
@@ -466,7 +468,7 @@ function MainPortfolio() {
             <h2 className="text-4xl font-bold mb-6 text-yellow-400">My Quests & Adventures</h2>
             
             <div className="mb-6 text-gray-300">
-              Check out some of my latest projects and game development work.
+              Check out some of my latest projects and web development work.
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
