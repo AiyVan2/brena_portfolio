@@ -105,7 +105,7 @@ function StartScreen({ onStart }) {
           }}
           className="mb-6"
         >
-          <div className="text-6xl mb-2">🎮</div>
+          <div className="text-6xl mb-2">🕹️</div>
         </motion.div>
         
         <motion.h1
@@ -133,7 +133,7 @@ function StartScreen({ onStart }) {
           
           <motion.button
             onClick={() => setShowInstructions(!showInstructions)}
-            className="block text-sm underline text-gray-500 hover:text-yellow-400"
+            className="block text-sm underline text-gray-500 hover:text-yellow-400 mx-auto"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
@@ -538,43 +538,9 @@ function MainPortfolio() {
               <p className="text-gray-300">Ready to start a new quest together? Reach out!</p>
             </div>
             
-            <div className="grid md:grid-cols-2 gap-12">
+            <div className="gap-12">
               <div>
-                <form className="space-y-6">
-                  <div>
-                    <label className="block text-yellow-400 mb-2">Your Name</label>
-                    <input 
-                      type="text" 
-                      className="w-full p-3 bg-gray-800 border border-gray-700 rounded focus:outline-none focus:border-yellow-400"
-                      placeholder="Enter your name"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-yellow-400 mb-2">Your Email</label>
-                    <input 
-                      type="email" 
-                      className="w-full p-3 bg-gray-800 border border-gray-700 rounded focus:outline-none focus:border-yellow-400"
-                      placeholder="Enter your email"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-yellow-400 mb-2">Message</label>
-                    <textarea 
-                      className="w-full p-3 bg-gray-800 border border-gray-700 rounded resize-none h-32 focus:outline-none focus:border-yellow-400"
-                      placeholder="Enter your message"
-                    ></textarea>
-                  </div>
-                  
-                  <PixelButton className="w-full">
-                    SEND MESSAGE
-                  </PixelButton>
-                </form>
-              </div>
-              
-              <div>
-                <div className="p-6 bg-gray-800 border border-gray-700 rounded mb-6">
+                <div className="p-6 bg-gray-800 border border-gray-700 rounded mb-6 text-center">
                   <h3 className="text-xl font-bold mb-4 text-yellow-400">Quick Contact</h3>
                   
                   <div className="space-y-4">
@@ -592,10 +558,10 @@ function MainPortfolio() {
                   </div>
                 </div>
                 
-                <div>
+                <div className='mx-auto text-center'>
                   <h3 className="text-xl font-bold mb-4 text-yellow-400">Join My Quest</h3>
                   
-                  <div className="flex flex-wrap gap-4">
+                  <div className="flex flex-wrap gap-4 text-center">
                     <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer">
                       <motion.div 
                         className="w-12 h-12 flex items-center justify-center bg-gray-800 rounded-full"
@@ -629,6 +595,7 @@ function MainPortfolio() {
           </GameWindow>
         </div>
       </section>
+
 
       {/* Footer */}
       <footer className="bg-black py-8 px-6 text-center">
