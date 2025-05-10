@@ -628,7 +628,7 @@ function MainPortfolio() {
             <div className="gap-12">
               <div>
                 <div className="p-6 bg-gray-800 border border-gray-700 rounded mb-6 text-center">
-                  <h3 className="text-xl font-bold mb-4 text-yellow-400">Quick Contact</h3>
+                  <h3 className="text-xl font-bold mb-4 text-yellow-400">Contacts</h3>
                   
                   <div className="space-y-4">
                     <div>
