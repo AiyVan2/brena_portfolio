@@ -5,7 +5,15 @@ import GameWindow from './components/GameWindow.jsx';
 import SkillBar from './components/SkillBar.jsx';
 import PixelButton from './components/PixelButton.jsx';
 import mypicture from './images/brenapic.jpg';
-import { image, title } from 'framer-motion/client';
+import Eirapic from './images/Eira Pic.png';
+import ASproutsJounrneypic from './images/A Sprouts Journey Pic.png';
+import AKnightShiftpic from './images/A Knight Shift Pic.png';
+import ClinicStudentSystempic from './images/Clinic Student System Pic.jpg';
+import LibrarySystempic from './images/Library System Pic.jpg';
+import EventSystempic from './images/Event System Pic.jpg';
+import PrintITpic from './images/Print IT System Pic.jpg';
+import ToDoListpic from './images/To Do List Pic.jpg';
+import { div, image, title } from 'framer-motion/client';
 
 const ProjectCard = ({ title, description, image, tags, link }) => (
   <motion.div 
@@ -191,48 +199,66 @@ function MainPortfolio() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const skills = [
-    { name: "React", level: 85 },
-    { name: "JavaScript", level: 80 },
-    { name: "Unity", level: 75 },
-    { name: "C#", level: 70 },
-    { name: "HTML/CSS", level: 90 },
-    { name: "Game Design", level: 65 }
-  ];
 
   const gamedevprojects = [
     {
-      title: "A Sprouts Journey",
-      description: "A platformer",
-      image: mypicture,
-      tags: ["Unity", "C#", "2D", "Pixel Art"],
+      title: "🌱 A Sprout's Journey",
+      description: "A cozy 2D platformer where you guide a growing sprout through lush terrain, collecting sunlight and water drops to unlock new stages of growth.",
+      image: ASproutsJounrneypic,
+      tags: ["Unity", "C#", "2D", "Pixel Art","Growth Mechanic","Game Jam"],
       link: "https://aiyvan.itch.io/a-sprouts-journey"
     },
     {
-      title: "Eira",
-      description: "A 2D mobile metroidvania",
-      tags: ["React", "JavaScript", "Web Design"],
+      title: "🗡 Eira",
+      description: "A mobile 2D metroidvania-style capstone project featuring boss fights, puzzle sequences, and precision parkour with tight jumping and dashing mechanics.",
+      image: Eirapic,
+      tags: ["Unity", "C#", "Mobile Game", "2D Metroidvania", "Boss Fights", "Puzzle Platformer", "Precision Movement"],
       link: "https://aiyvan.itch.io/eira"
     },
     {
-      title: "The Knight Shift",
-      description: "A Nostalgic 1-Week Challenge: Rebuilding My Childhood Memories",
-      tags: ["React", "Node.js", "Firebase"],
+      title: "⚔️ The Knight Shift",
+      description: "A fast-paced, side-scrolling strategy game inspired by Cartoon Wars and Battle Cats, where knights clash with orcs in this one-week game jam challenge.",
+      image: AKnightShiftpic,
+      tags: ["Unity", "C#", "Strategy", "2D", "Mobile Game", "Side-Scrolling", "Game Jam"],
       link: "https://aiyvan.itch.io/the-knight-shift"
     },
     {
-      title: "Unnamed ONGOING PROJECT",
-      description: "A 2d Metrodivania Game",
-      tags: ["C#","2D","Metroidvania"],
+      title: "Halo Hallo: The Sago Saga [IN-PROGRESS 🛠]",
+      description: "A Hollow Knight-inspired metroidvania rooted in Filipino culture. Dive into the layers of the Halo Hallo Region and uncover its sweet, forgotten secrets.",
+      tags: ["Unity", "C#", "2D Metroidvania", "Pixel Art", "Filipino Culture", "Boss Fights", "Exploration", "Platformer"],
     }
   ];
 
   const webdevprojects = [
     {
-      title: "Test Web",
-      description: "A platformer",
-      tags: ["Unity", "C#", "2D", "Pixel Art"],
-      link: "https://aiyvan.itch.io/a-sprouts-journey"
+      title: "Student Clinic Management System",
+      image: ClinicStudentSystempic,
+      description: "A system for managing student health records, check-up bookings (10 slots/hour), and medical alerts, with email reminders for health-related announcements.",
+      tags: ["PHP", "MySQL", "HTML", "Tailwind", "JavaScript", "Email Integration"],
+    },
+    {
+      title: "Digital Library Management Platform",
+      image: LibrarySystempic,
+      description: "An admin-student system for managing book inventories, genres and authors",
+      tags: ["PHP", "MySQL", "Tailwind", "JavaScript"],
+    },
+    {
+      title: "Event Registration System",
+      image: EventSystempic,
+      description: "A system where admins post events and Users can browse and register, streamlining event organization and attendance.",
+      tags: ["PHP", "MySQL", "HTML", "Tailwind", "JavaScript"],
+    },
+    {
+      title: "Student Printing Service Portal",
+      image: PrintITpic,
+      description: "A request system where students place print orders with custom options (size, color, special instructions); student partners handle fulfillment and earn extra income.",
+      tags: ["PHP", "MySQL", "HTML", "Tailwind", "File Upload"],
+    },
+    {
+      title: "To Do List",
+      image: ToDoListpic,
+      description: "A Simple To Do List",
+      tags: ["PHP", "MySQL", "HTML", "AzureDatabase"],
     }
   ];
 
@@ -485,32 +511,20 @@ function MainPortfolio() {
       {/* Skills Section */}
       <section 
         id="skills" 
-        className="min-h-screen py-24 px-8 bg-gray-800 flex items-center"
+        className="min-h-screen py-24 px-8 bg-gray-800 flex items-center justify-center"
       >
         <div className="max-w-6xl mx-auto w-full">
           <GameWindow title="SKILLS & ABILITIES">
-            <div className="grid md:grid-cols-2 gap-12">
+            <div className="grid md:grid-cols-2 gap-8">
+
+              {/* Game Dev tools*/}
               <div>
-                <h2 className="text-4xl font-bold mb-6 text-yellow-400">Tech Tree</h2>
+                <h2 className="text-4xl font-bold mb-6 text-yellow-400 text-center">Game Dev Equipment & Tools</h2>
                 
-                <div className="space-y-6">
-                  {skills.map((skill, index) => (
-                    <SkillBar key={index} skill={skill.name} level={skill.level} />
-                  ))}
-                </div>
-              </div>
-              
-              <div>
-                <h2 className="text-4xl font-bold mb-6 text-yellow-400">Equipment & Tools</h2>
-                
-                <div className="grid grid-cols-3 gap-6">
+                <div className="grid grid-cols-2 gap-6">
                   {[
-                    { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-                    { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
-                    { name: "HTML5", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
-                    { name: "CSS3", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
-                    { name: "Unity", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" },
-                    { name: "C#", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" },
+                    { name: "Unity", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-original.svg" },
+                    { name: "C#", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg"}
                   ].map((tool, index) => (
                     <motion.div 
                       key={index}
@@ -519,6 +533,77 @@ function MainPortfolio() {
                     >
                       <img src={tool.icon} alt={tool.name} className="w-16 h-16 mb-2" />
                       <div className="text-sm text-center">{tool.name}</div>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Web Dev tools*/}
+              <div>
+                <h2 className="text-4xl font-bold mb-6 text-yellow-400 text-center">Web Dev Equipment & Tools</h2>
+                
+                <div className="grid grid-cols-3 gap-6">
+                  {[
+                    { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
+                    { name: "PHP", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-plain.svg" },
+                    { name: "HTML5", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+                    { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" },
+                    { name: "Tailwind CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" },
+                    { name: "Framer Motion", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/framermotion/framermotion-original.svg" },
+                    { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"},
+                  ].map((tool, index) => (
+                    <motion.div 
+                      key={index}
+                      className="flex flex-col items-center justify-center p-4 bg-gray-900 rounded-lg hover:bg-gray-700 transition-colors"
+                      whileHover={{ y: -5 }}
+                    >
+                      <img src={tool.icon} alt={tool.name} className="w-16 h-16 mb-2" />
+                      <div className="text-sm text-center">{tool.name}</div>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+
+                  {/* Management Tool*/}
+              <div>
+                <h2 className="text-4xl font-bold mb-6 text-yellow-400 text-center">Productivity & Version Control</h2>
+                
+                <div className="grid grid-cols-2 gap-6">
+                  {[
+                    { name: "GitHub Desktop", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" },
+                    { name: "Visual Studio Code", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-plain.svg" },
+                    { name: "Visual Studio", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/visualstudio/visualstudio-original.svg" },
+                    { name: "Milanote", icon: "" }
+                  ].map((tool, index) => (
+                    <motion.div 
+                      key={index}
+                      className="flex flex-col items-center justify-center p-4 bg-gray-900 rounded-lg hover:bg-gray-700 transition-colors"
+                      whileHover={{ y: -5 }}
+                    >
+                      <img src={tool.icon} alt={tool.name} className="w-16 h-16 mb-2" />
+                      <div className="text-sm text-center">{tool.name}</div>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Design Protoyping*/}
+              <div>
+                <h2 className="text-4xl font-bold mb-6 text-yellow-400 text-center">Design & Prototyping</h2>
+                
+                <div className="grid grid-cols-2 gap-6">
+                  {[
+                    { name: "Figma", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" },
+                    { name: "Piskel", icon: "" },
+                    { name: "Canva", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/canva/canva-original.svg" }
+                  ].map((tool, index) => (
+                    <motion.div 
+                      key={index}
+                      className="flex flex-col items-center justify-center p-4 bg-gray-900 rounded-lg hover:bg-gray-700 transition-colors"
+                      whileHover={{ y: -5 }}
+                    >
+                      <img src={tool.icon} alt={tool.name} className="w-16 h-16 mb-2" />
+                      <div className="text-sm text-center font-medium">{tool.name}</div>
                     </motion.div>
                   ))}
                 </div>
@@ -563,7 +648,7 @@ function MainPortfolio() {
                 <div className='mx-auto text-center'>
                   <h3 className="text-xl font-bold mb-4 text-yellow-400">Join My Quest</h3>
                   
-                  <div className="flex flex-wrap gap-4 text-center">
+                  <div className="flex flex-wrap gap-4 text-center justify-center">
                     <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer">
                       <motion.div 
                         className="w-12 h-12 flex items-center justify-center bg-gray-800 rounded-full"
