@@ -551,6 +551,8 @@ function MainPortfolio() {
                     { name: "Tailwind CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" },
                     { name: "Framer Motion", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/framermotion/framermotion-original.svg" },
                     { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"},
+                    { name: "Karate Automation", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/karatelabs/karatelabs-original.svg"},
+                    { name: "Cucumber", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cucumber/cucumber-plain.svg"},
                   ].map((tool, index) => (
                     <motion.div 
                       key={index}
@@ -649,16 +651,16 @@ function MainPortfolio() {
                   <h3 className="text-xl font-bold mb-4 text-yellow-400">Join My Quest</h3>
                   
                   <div className="flex flex-wrap gap-4 text-center justify-center">
-                    <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/AiyVan2" target="_blank" rel="noopener noreferrer">
                       <motion.div 
                         className="w-12 h-12 flex items-center justify-center bg-gray-800 rounded-full"
                         whileHover={{ y: -3, backgroundColor: "#333" }}
                       >
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" className="w-6 h-6" />
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub" className="w-6 h-6" />
                       </motion.div>
                     </a>
                     
-                    <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/in/charles-brena-23b4952b9/" target="_blank" rel="noopener noreferrer">
                       <motion.div 
                         className="w-12 h-12 flex items-center justify-center bg-gray-800 rounded-full"
                         whileHover={{ y: -3, backgroundColor: "#0077b5" }}
@@ -667,12 +669,12 @@ function MainPortfolio() {
                       </motion.div>
                     </a>
                     
-                    <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.tiktok.com/@alyvannnnn" target="_blank" rel="noopener noreferrer">
                       <motion.div 
                         className="w-12 h-12 flex items-center justify-center bg-gray-800 rounded-full"
                         whileHover={{ y: -3, backgroundColor: "#1da1f2" }}
                       >
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/twitter/twitter-original.svg" alt="Twitter" className="w-6 h-6" />
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/tiktok.svg" alt="Twitter" className="w-6 h-6" />
                       </motion.div>
                     </a>
                   </div>
